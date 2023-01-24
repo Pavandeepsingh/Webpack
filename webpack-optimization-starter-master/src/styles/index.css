@@ -101,10 +101,28 @@ h1 {
   margin-right: 10px;
   cursor: pointer;
   visibility: hidden;
-  /* background: url("../../images/delete.png") center no-repeat; */
+  background: url("../../images/delete.png") center no-repeat;
   background-size: 90%;
 }
 
 .todolist-wrapper .todo-list li:hover .delete {
   visibility: visible;
+}
+
+
+.motivational-pic-container {
+  display: flex;
+  justify-content: center;
+}
+
+.motivational-pic-container .motivational-pictures {
+  display: flex;
+  gap: 50px;
+  margin: 200px auto;
+}
+
+.motivational-pic-container .motivational-pictures img {
+  width: 400px;
+  height: 200px;
+  border-radius: 8px;
 }

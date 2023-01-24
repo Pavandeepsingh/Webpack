@@ -33,6 +33,8 @@ const realCheckboxClass = css`
     left: -5px;
 `
 
+import checkMarkSvg from '/images/checkmark.svg';
+import { getMotivationalPictures } from './api';
 
 export function renderTodos(todos) {
     const renderedItemArray = todos.map(function (todo) {
@@ -41,7 +43,7 @@ export function renderTodos(todos) {
         return `
             <li data-id="${todo.id}" class="${className}">
                 <span class="custom-checkbox">
-                    <img class="check" src="./images/checkmark.svg" width="22" height="22"></img> 
+                    <img class="check" src="${checkMarkSvg}" width="22" height="22"></img> 
                     <input class="${realCheckboxClass}" data-element="real-checkbox" type="checkbox" ${completionClass} />
                 </span>
                 <label>${todo.text}</label>
@@ -50,6 +52,8 @@ export function renderTodos(todos) {
         `
     })
     document.querySelector('.todo-list').innerHTML = renderedItemArray.join('')
+
+    renderMotivationPic()
 }
 
 export function clearNewTodoInput() {
@@ -75,4 +79,19 @@ const showNotification = () => {
         const notEle = document.querySelector(`.${styles.notification}`);
         notEle.parentNode.removeChild(notEle);
     }, 1000);
+}
+
+
+function renderMotivationPic() {
+    getMotivationalPictures().then(pic => {
+        const motHtml = `
+             <div class="motivational-pictures">
+               ${pic.map(p => {
+                return `<img class="header-image" src="${p}" alt="${p}" />`
+               })}
+             </div>
+        `;
+        const mPC = document.querySelector('.motivational-pic-container');
+        mPC.innerHTML = motHtml;
+    })
 }
