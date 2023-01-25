@@ -4,8 +4,10 @@
   "description": "Learning Webpack",
   "main": "index.js",
   "scripts": {
-    "dev": "npx webpack serve --config webpack/webpack.dev.config.js --hot",
-    "build": "npx webpack --config webpack/webpack.prod.config.js"
+    "dev": "cross-env NODE_ENV=dev npx webpack serve --config webpack/webpack.dev.config.js --hot",
+    "build": "cross-env NODE_ENV=production npx webpack --config webpack/webpack.prod.config.js",
+    "typecheck": "tsc --noEmit",
+    "bundle-analyzer": "cross-env NODE_ENV=production npx webpack --config webpack/webpack.analyzer.config.js "
   },
   "repository": {
     "type": "git",
@@ -18,9 +20,17 @@
   },
   "homepage": "https://github.com/Pavandeepsingh/Webpack#readme",
   "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-proposal-pipeline-operator": "^7.18.9",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.18.6",
+    "@emotion/babel-plugin": "^11.10.5",
     "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
+    "core-js": "^3.27.2",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "html-loader": "^4.2.0",
@@ -41,7 +51,9 @@
     "scss": "^0.2.4",
     "scss-loader": "^0.0.1",
     "style-loader": "^3.3.1",
+    "typescript": "^4.9.4",
     "webpack": "^5.75.0",
+    "webpack-bundle-analyzer": "^4.7.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1",
     "webpack-merge": "^5.8.0"
@@ -49,7 +61,10 @@
   "dependencies": {
     "@emotion/css": "^11.10.5",
     "bootstrap": "^5.2.3",
+    "jquery": "^3.6.3",
     "jss": "^10.9.2",
-    "jss-preset-default": "^10.9.2"
+    "jss-preset-default": "^10.9.2",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21"
   }
 }

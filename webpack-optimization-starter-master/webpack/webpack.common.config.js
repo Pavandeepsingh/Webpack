@@ -10,6 +10,9 @@ const config = {
         path: path.resolve(__dirname, '../dist'),
         // clean : true  // Only works in production mode
     },
+    resolve: {
+        extensions: [".ts", ".js"]
+    },
     module: {
         rules: [
             {
@@ -19,6 +22,13 @@ const config = {
                         loader: 'html-loader'
                     }
                 ]
+            },
+            {
+                test: /\.(js|ts)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
             }
         ]
     },
@@ -29,7 +39,7 @@ const config = {
         }),
         new CopyWebpackPlugin({
             patterns: [{
-                from :'images/img/*.*'
+                from: 'images/img/*.*'
             }]
         }),
         new CleanWebpackPlugin() // cleans in both dev and prod  
