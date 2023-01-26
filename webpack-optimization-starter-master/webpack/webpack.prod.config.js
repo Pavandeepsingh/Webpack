@@ -8,9 +8,11 @@ const glob = require('glob');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = merge(common, {
+    entry: './src/js/index.js',
     mode: "production",
     output: {
-        filename: 'js/[name].[contenthash:12].js'
+        filename: 'js/[name].[contenthash:12].js',
+        // publicPath: '/static/'
     },
     devtool: "source-map",
     optimization: {

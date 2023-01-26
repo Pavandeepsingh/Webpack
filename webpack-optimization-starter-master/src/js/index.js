@@ -2,6 +2,11 @@ import { confirmRemoveHandler, newTodoEventHandler, onLoadEventHandler, removeTo
 import '../styles/venders.scss';
 import '../styles/index.css';
 
+
+export function renderApp() {
+    onLoadEventHandler()
+}
+
 window.addEventListener('load', onLoadEventHandler)
 document.addEventListener('change', function (event) {
     if (event.target.classList.contains('new-todo')) {
