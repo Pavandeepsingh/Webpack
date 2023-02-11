@@ -23,4 +23,8 @@ plugins: 1. additional js that do everything loaders cannot do
          TerserPlugin => for compressing js 
 
 
+https://eslint.org/docs/latest/
+
+
+https://eslint.org/docs/latest/use/configure/rules
     
