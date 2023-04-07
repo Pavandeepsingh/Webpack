@@ -8,6 +8,7 @@ const config = {
     // entry: './src/js/index.js',
     output: {
         path: path.resolve(__dirname, '../dist'),
+        // filename:'bundle.js'
         // clean : true  // Only works in production mode
     },
     resolve: {

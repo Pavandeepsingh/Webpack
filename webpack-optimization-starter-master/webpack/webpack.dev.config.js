@@ -21,9 +21,9 @@ module.exports = merge(common, {
             writeToDisk: true
         },
         client: {
-            overlay: true
+            overlay: true // overlay to show compiler errors
         },
-        liveReload: false,
+        liveReload: false,  
     },
     module: {
         rules: [
