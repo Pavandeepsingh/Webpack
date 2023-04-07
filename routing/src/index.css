@@ -1,0 +1,55 @@
+#reset-this-root {
+  all: initial;
+}
+
+
+body {
+  background-color: #f0f1f5;
+  margin: 0px;
+  color: #45505b;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a.active {
+  font-size: 800;
+  color: lightcoral;
+}
+
+a {
+  text-decoration: none;
+  
+}
+

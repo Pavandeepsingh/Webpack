@@ -1,0 +1,45 @@
+@mixin random-bgr() {
+  background: rgb(random(255), random(255), random(255));
+}
+
+.main-content {
+  width: 100%;
+  overflow-y: scroll;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-right: 30px;
+}
+
+.main_container {
+  min-width: 300px;
+  min-height: 200px;
+
+  // $num-colors: 100;
+  // $base-color: #996b4d;
+  // $spectrum: 360deg;
+  // $offset: 50deg;
+  // @for $i from 0 to $num-colors {
+  //   &:nth-child(#{$i}) {
+  //     @include random-bgr();
+  //   }
+  // }
+
+  color: #ba2649;
+  background-color: #ffa7ca;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+}
+
+
+.arrow-icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 20px;
+  transform: rotate(-90deg);
+}

@@ -1,0 +1,35 @@
+.flex-centered {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  border: 1px solid #f1f1f1;
+  position: fixed;
+  width: calc(100% - 7px);
+  box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+  margin-left: 3px;
+  padding: 0px 20px;
+  background-color: white;
+}
+
+.company-icon {
+  width: 150px;
+  height: 55px;
+  cursor: pointer;
+  margin: 10px 0px;
+  box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+}
+
+.menu-icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+
+.title__heading {
+    font-size: 2rem;
+}

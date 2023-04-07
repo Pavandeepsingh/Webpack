@@ -1,0 +1,30 @@
+.left-pannel {
+  width: 20vw;
+  min-width: 240px;
+  li {
+    text-transform: capitalize;
+  }
+  border-right: 1px solid #cdcdcd;
+  background-color: white;
+  overflow: hidden;
+  &:hover {
+    overflow-y: scroll;
+  }
+}
+
+.pannel_menu {
+  border-bottom: 1px solid #c1c1c1;
+  font-size: 1.15rem;
+  padding: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e1e1e1;
+    color: rgb(5, 5, 71);
+  }
+
+  &.active {
+    background-color: #e1e1e1;
+    color: rgb(5, 5, 71);
+  }
+}
